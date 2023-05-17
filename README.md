@@ -90,7 +90,7 @@ aggreagate.csv  -csvJMReportReference aggregate_ref.csv -csvLabelColumnName Labe
 Example JUnit XML file generated :
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="4" name="JUnit Report From JMeter Report Csv" skipped="0" tests="11">
+<testsuite errors="0" failures="4" name="JUnit Report From Compare JMeter Report Csv" skipped="0" tests="11">
   <testcase classname="Percentiles_90" name="90% Line (SC\d+_P.*) &lt;= (500 + REFERENCE Value)"/>
   <testcase classname="Percentiles_90 specific pages" name="90% Line (SC01_P03_LOGIN|SC03_P03_LOGIN) &lt;= (10% + REFERENCE Value)"/>
   <testcase classname="Percentiles_90 specific pages" name="90% Line (SC01_P03_LOGIN|SC03_P03_LOGIN) &lt;= (REFERENCE Value)"/>
