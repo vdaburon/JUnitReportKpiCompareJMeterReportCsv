@@ -3,7 +3,7 @@ package io.github.vdaburon.jmeter.utils.comparekpi;
 /**
  * Classe to save the comparaison parameters for a KPI and the result
  */
-public class checkKpiCompareResult {
+public class CheckKpiCompareResult {
     private String nameKpi;
     private String metricCsvColumnName;
     private String labelRegex;
@@ -71,6 +71,11 @@ public class checkKpiCompareResult {
     }
 
     public boolean isKpiFail() {
+        return isKpiFail;
+    }
+
+    // ajout pour freemaker qui fait un get (getKpiFail) et pas un is (isKpiFail)
+    public boolean getKpiFail() {
         return isKpiFail;
     }
 
