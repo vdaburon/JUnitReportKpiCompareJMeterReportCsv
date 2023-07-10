@@ -6,10 +6,10 @@
 
     <groupId>io.github.vdaburon</groupId>
     <artifactId>junit-reporter-kpi-compare-jmeter-report-csv</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
     <packaging>jar</packaging>
     <name>Create a JUnit XML file with KPI rules and compare 2 JMeter CSV Report (current and reference)</name>
-    <description>Read KPI declarations in a file and apply the KPI assertion on 2 JMeter Report CSV files (current and reference) and generates a result file in JUnit XML format and other formats  : html, csv and json.</description>
+    <description>Read KPI declarations in a file and apply the KPI assertion on 2 JMeter Report CSV files (current and reference) and generates a result file in JUnit XML format and other formats html, csv and json.</description>
     <url>https://github.com/vdaburon/JUnitReportKpiCompareJMeterReportCsv</url>
     <inceptionYear>2023</inceptionYear>
 
@@ -184,9 +184,17 @@
                 <configuration>
                     <serverId>ossrh</serverId>
                     <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>false </autoReleaseAfterClose>
+                    <autoReleaseAfterClose>false</autoReleaseAfterClose>
                 </configuration>
             </plugin>
         </plugins>
+
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <!-- add version for the generated library in the script shell .cmd and .sh -->
+                <filtering>true</filtering>
+            </resource>
+        </resources>
     </build>
 </project>

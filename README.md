@@ -135,15 +135,15 @@ If you click on link "Name Test" fail , you will show the fail message<br>
 ![junit jenkins build detail fail](doc/images/junit_report_jenkins_detail_fail.png)
 
 ## Html out format
-The result could be a html page ou partial html page (div)
+The result could be a html page ou partial html page (div)<br>
 ![html out format](doc/images/html_out_result.png)
 
 ## Csv out format
-The result in a csv file
+The result in a csv file<br>
 ![csv out format](doc/images/csv_out_result.png)
 
 ## Json out format
-The result in a Json file
+The result in a Json file<br>
 ![csv out format](doc/images/json_out_result.png)
 
 ## License
@@ -155,7 +155,7 @@ The maven groupId, artifactId and version, this plugin is in the **Maven Central
 ```xml
 <groupId>io.github.vdaburon</groupId>
 <artifactId>junit-reporter-kpi-compare-jmeter-report-csv</artifactId>
-<version>1.1</version>
+<version>1.2</version>
 ```
 Just include the plugin in your `pom.xml` and execute `mvn verify` <br>
 or individual launch `mvn -jmeterReportCurrent=synthesis.csv -DjmeterReportReference=synthesis_ref.csv -DkpiFile=kpi.csv -DjunitFile=TEST-jmeter-junit-plugin-compare-jmreport.xml exec:java@create_junit-reporter-kpi-compare-jmeter-report`
@@ -174,7 +174,7 @@ or individual launch `mvn -jmeterReportCurrent=synthesis.csv -DjmeterReportRefer
         <dependency>
             <groupId>io.github.vdaburon</groupId>
             <artifactId>junit-reporter-kpi-compare-jmeter-report-csv</artifactId>
-            <version>1.1</version>
+            <version>1.2</version>
         </dependency>
     </dependencies>
 
@@ -221,10 +221,26 @@ This tool is a java jar, so it's could be use as simple jar (look at [Release](h
 java -jar junit-reporter-kpi-compare-jmeter-report-csv-&lt;version&gt;-jar-with-dependencies.jar -csvJMReportCurrent summary.csv -csvJMReportReference summary_ref.csv -kpiFile kpi.csv -junitFile junit-report.xml -exitReturnOnFail true
 </pre>
 
+## Tool installed with jmeter-plugins-manager
+This tool could be installed with the jmeter-plugins-manager from jmeter.plugins.org.<br>
+The tool name is : "vdn@github - junit-reporter-kpi-compare-jmeter-report-csv tool"
+
+in JMETER_HOME\bin (Windows)
+<pre>
+junit-reporter-kpi-compare-jmeter-report-csv.cmd -csvJMReportCurrent summary.csv -csvJMReportReference summary_ref.csv -kpiFile kpi.csv -junitFile junit-report.xml -htmlOutFile result.html -csvOutFile result.csv
+</pre>
+or <br>
+in JMETER_HOME/bin (Linux or MacOS)
+<pre>
+junit-reporter-kpi-compare-jmeter-report-csv.sh -csvJMReportCurrent summary.csv -csvJMReportReference summary_ref.csv -kpiFile kpi.csv -junitFile junit-report.xml -htmlOutFile result.html -csvOutFile result.csv
+</pre>
+
 ## Link to other project
 Usually this plugin is use with [jmeter-graph-tool-maven-plugin](https://github.com/vdaburon/jmeter-graph-tool-maven-plugin)
 
 ## Versions
+version 1.2 add jmeter-plugins.org installer
+
 version 1.1 export result in html, json or csv format
 
 Version 1.0 initial version
