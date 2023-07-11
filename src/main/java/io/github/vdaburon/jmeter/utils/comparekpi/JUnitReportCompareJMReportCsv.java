@@ -59,7 +59,7 @@ public class JUnitReportCompareJMReportCsv {
     // column name Label in jmeter csv report
     public static final String K_CSV_JMREPORT_COL_LABEL_DEFAULT = "Label";
 
-    public static final String K_FREEMARKER_HTML_TEMPLATE_DIRECTORY = "/templates_freemarker";
+    public static final String K_FREEMARKER_HTML_TEMPLATE_DIRECTORY = "/templates_freemarker_comparekpi";
     public static final String K_FREEMARKER_HTML_TEMPLATE = "template_html_result.ftl";
     public static final String K_FREEMARKER_DIV_HTML_TEMPLATE = "template_div_result.ftl";
 

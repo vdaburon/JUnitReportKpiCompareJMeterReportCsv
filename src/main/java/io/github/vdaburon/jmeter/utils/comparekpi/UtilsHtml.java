@@ -1,5 +1,6 @@
 package io.github.vdaburon.jmeter.utils.comparekpi;
 
+import freemarker.cache.ClassTemplateLoader;
 import freemarker.core.HTMLOutputFormat;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -25,8 +26,7 @@ public class UtilsHtml {
      */
     public static void init() throws IOException {
         cfg = new Configuration();
-        cfg.setClassForTemplateLoading(UtilsHtml.class, JUnitReportCompareJMReportCsv.K_FREEMARKER_HTML_TEMPLATE_DIRECTORY);
-
+        cfg.setTemplateLoader(new ClassTemplateLoader(UtilsHtml.class, JUnitReportCompareJMReportCsv.K_FREEMARKER_HTML_TEMPLATE_DIRECTORY));
         cfg.setIncompatibleImprovements(new Version(2, 3, 22));
         cfg.setDefaultEncoding("UTF-8");
         cfg.setLocale(Locale.US);

@@ -1,4 +1,10 @@
-<div>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta content="text/html; charset=utf-8">
+  <title>HTML KPIs Result From Compare JMeter Report Csv</title>
+  </head>
+  <body>
 <style>
 table.table_jp {border-collapse: collapse;}
 table.table_jp, table.table_jp th, table.table_jp tr, table.table_jp td {
@@ -15,7 +21,7 @@ table.table_jp td:nth-child(5) { text-align: right; }
 <table class="table_jp">
   <tr><td>File with KPIs</td><td>${globalResult.kpiFile}</td></tr>
   <tr><td>File CSV Current Report</td><td>${globalResult.csvJmeterCurrentReport}</td></tr>
-  <tr><td>File CSV Reference Report</td><td>${globalResult.csvJmeterReferenceReport }</td></tr>
+  <tr><td>File CSV Reference Report</td><td>${globalResult.csvJmeterReferenceReport}</td></tr>
   </table>
 <br>
 <h2>Test Summary</h2>
@@ -39,5 +45,6 @@ table.table_jp td:nth-child(5) { text-align: right; }
         <td><#if checkKpiCompareResult.kpiFail>${checkKpiCompareResult.failMessage}</#if></td>
     </tr>
   </#list>
-  </table>
-</div>
+  </table>  
+  </body>
+</html>

@@ -155,7 +155,7 @@ The maven groupId, artifactId and version, this plugin is in the **Maven Central
 ```xml
 <groupId>io.github.vdaburon</groupId>
 <artifactId>junit-reporter-kpi-compare-jmeter-report-csv</artifactId>
-<version>1.2</version>
+<version>1.3</version>
 ```
 Just include the plugin in your `pom.xml` and execute `mvn verify` <br>
 or individual launch `mvn -jmeterReportCurrent=synthesis.csv -DjmeterReportReference=synthesis_ref.csv -DkpiFile=kpi.csv -DjunitFile=TEST-jmeter-junit-plugin-compare-jmreport.xml exec:java@create_junit-reporter-kpi-compare-jmeter-report`
@@ -174,7 +174,7 @@ or individual launch `mvn -jmeterReportCurrent=synthesis.csv -DjmeterReportRefer
         <dependency>
             <groupId>io.github.vdaburon</groupId>
             <artifactId>junit-reporter-kpi-compare-jmeter-report-csv</artifactId>
-            <version>1.2</version>
+            <version>1.3</version>
         </dependency>
     </dependencies>
 
@@ -239,6 +239,8 @@ junit-reporter-kpi-compare-jmeter-report-csv.sh -csvJMReportCurrent summary.csv 
 Usually this plugin is use with [jmeter-graph-tool-maven-plugin](https://github.com/vdaburon/jmeter-graph-tool-maven-plugin)
 
 ## Versions
+version 1.3 change default freemaker directory for html_templates because same directory and same files name than others tools junit-report-kpi-xxx generate errors
+
 version 1.2 add jmeter-plugins.org installer
 
 version 1.1 export result in html, json or csv format
