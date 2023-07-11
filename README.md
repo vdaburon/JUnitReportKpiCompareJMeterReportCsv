@@ -186,15 +186,19 @@ or individual launch `mvn -jmeterReportCurrent=synthesis.csv -DjmeterReportRefer
                 <version>1.2.1</version>
                 <executions>
                     <execution>
+                        <!-- individual launch : mvn exec:exec@create_junit-reporter-kpi-compare-jmeter-report -->
                         <id>create_junit-reporter-kpi-compare-jmeter-report</id>
                         <phase>verify</phase>
                         <goals>
-                            <goal>java</goal>
+                            <goal>exec</goal>
                         </goals>
                         <configuration>
-                            <mainClass>io.github.vdaburon.jmeter.utils.comparekpi.JUnitReportCompareJMReportCsv
-                            </mainClass>
                             <arguments>
+                                <argument>-classpath</argument>
+                                <!-- automatically creates the classpath using all project dependencies,
+                                                   also adding the project build directory -->
+                                <classpath/>
+                                <argument>io.github.vdaburon.jmeter.utils.comparekpi.JUnitReportCompareJMReportCsv</argument>
                                 <argument>-kpiFile</argument>
                                 <argument>${project.build.directory}/jmeter/testFiles/${kpiFile}</argument>
                                 <argument>-csvJMReportCurrent</argument>
