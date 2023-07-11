@@ -158,7 +158,7 @@ The maven groupId, artifactId and version, this plugin is in the **Maven Central
 <version>1.3</version>
 ```
 Just include the plugin in your `pom.xml` and execute `mvn verify` <br>
-or individual launch `mvn -jmeterReportCurrent=synthesis.csv -DjmeterReportReference=synthesis_ref.csv -DkpiFile=kpi.csv -DjunitFile=TEST-jmeter-junit-plugin-compare-jmreport.xml exec:java@create_junit-reporter-kpi-compare-jmeter-report`
+or individual launch `mvn -jmeterReportCurrent=synthesis.csv -DjmeterReportReference=synthesis_ref.csv -DkpiFile=kpi.csv -DjunitFile=TEST-jmeter-junit-plugin-compare-jmreport.xml exec:exec@create_junit-reporter-kpi-compare-jmeter-report`
 
 ```xml
 
