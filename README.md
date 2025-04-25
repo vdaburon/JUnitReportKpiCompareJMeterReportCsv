@@ -243,7 +243,7 @@ junit-reporter-kpi-compare-jmeter-report-csv.sh -csvJMReportCurrent summary.csv 
 Usually this plugin is use with [jmeter-graph-tool-maven-plugin](https://github.com/vdaburon/jmeter-graph-tool-maven-plugin)
 
 ## Versions
-version 1.4 date 2025-04-25, Define unique table css class to avoid conflict, update libraries (jackson, commons-cli, commons-csv, freemarker, nexus-staging).
+version 1.4 date 2025-04-25, Change page title, define unique table css class to avoid conflict, update libraries (jackson, commons-cli, commons-csv, freemarker, nexus-staging).
 
 version 1.3 date 2023-07-11, Change default freemaker directory for html_templates because same directory and same files name than others tools junit-report-kpi-xxx generate errors
 
